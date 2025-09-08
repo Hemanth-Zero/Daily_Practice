@@ -1,0 +1,29 @@
+//1317. Convert Integer to the Sum of Two No-Zero Integers
+//Leet code question got from coding club on day 1 9-8-25
+
+
+class Solution {
+    public boolean isvalid(int n){
+        boolean flag = true ;
+        int i = 10;
+        while ( n/i!=0){
+            if(n%i==0) return false ;
+           n=  n/i;
+        
+        }
+        return true;
+    }
+    public int[] getNoZeroIntegers(int n) {
+        int[] arr = new int[2];
+        int i = 1;
+        while( i<=n/2){
+            if(isvalid(i) && isvalid(n-i)){
+                arr[0] = i;
+                arr[1] = n-i;
+                return arr;
+            }
+            i++;
+        }
+        return arr;
+    }
+}
