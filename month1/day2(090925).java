@@ -1,6 +1,7 @@
+//2327. Number of People Aware of a Secret
 class Solution {
     public int peopleAwareOfSecret(int n, int delay, int forget) {
-        final int MOD = 1_000_000_007;
+        final int MOD = 1_000_000_007;    //controls the integer overflow
         long[] dp = new long[n + 1];     // dp[i] = # of people who learn secret on day i
         long[] pref = new long[n + 1];   // prefix sum of dp
         dp[1] = 1;
