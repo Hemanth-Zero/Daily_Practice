@@ -1,3 +1,5 @@
+//1733. Minimum Number of People to Teach 
+//23ms i couldnt 
 class Solution {
     public int minimumTeachings(int n, int[][] languages, int[][] friendships) {
         Set<Integer> need = new HashSet<>();
