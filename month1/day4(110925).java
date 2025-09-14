@@ -1,5 +1,6 @@
 import java.util.*;
-
+//2785. Sort Vowels in a String
+//logical i got correct i made syntax errors
 class Solution {
 
     // Check if a character is a vowel
