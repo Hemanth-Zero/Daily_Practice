@@ -1,3 +1,5 @@
+//3227. Vowels Game in a String
+//ez i got it with 15ms beat 27% 
 class Solution {
     int vowel(String str) {
         int count = 0;

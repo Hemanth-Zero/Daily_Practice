@@ -1,3 +1,5 @@
+//3541. Find Most Frequent Vowel and Consonant
+//ez i got it with 2ms beat 67% 
 class Solution {
     public boolean isvowel(char s) {
         s = Character.toLowerCase(s); // ensure lowercase
