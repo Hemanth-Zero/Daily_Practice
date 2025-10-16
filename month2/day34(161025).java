@@ -1,24 +1,19 @@
 import java.util.*;
+
 class Solution {
     public int findSmallestInteger(int[] nums, int value) {
-        int i;
-        boolean found = true;
-        boolean flags[] = new boolean[nums.length];
-        Arrays.fill(flags, false);
-        for (int j = 0; j < nums.length; j++) {
-            nums[j] = ((nums[j] % value) + value) % value;
+        int[] freq = new int[value];
+        for (int num : nums) {
+            int rem = ((num % value) + value) % value;
+            freq[rem]++;
         }
-        for (i = 0; found; i++) {
-            found = false;
-            int result = i % value;
-            for (int j = 0; j < nums.length; j++) {
-                if (!flags[j] && nums[j] == result) {
-                    flags[j] = true;
-                    found = true;
-                    break;
-                }
-            }
+
+        int x = 0;
+        while (true) {
+            int rem = x % value;
+            if (freq[rem] == 0) return x;
+            freq[rem]--;
+            x++;
         }
-        return i - 1;
     }
 }
